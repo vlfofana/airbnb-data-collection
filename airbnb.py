@@ -1494,7 +1494,7 @@ class Survey():
                     if flag == FLAGS_PRINT:
                         # for FLAGS_PRINT, fetch one page and print it
                         sys.exit(0)
-                    if room_count < SEARCH_LISTINGS_ON_FULL_PAGE:
+                    if not room_count or room_count < SEARCH_LISTINGS_ON_FULL_PAGE:
                         logger.debug("Final page of listings for this search")
                         break
         except Exception:
